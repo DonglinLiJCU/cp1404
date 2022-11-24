@@ -2,7 +2,7 @@
 """
 Car class
 Estimate: 5 minutes
-Actual:    minutes
+Actual:   7 minutes
 """
 
 
@@ -40,8 +40,12 @@ class Car:
         return distance
 
 
-limo = Car("Benz", 100)
-limo.add_fuel(20)
-print(limo.fuel)
-limo.drive(115)
-print(str(limo))
+def main():
+    limo = Car("Benz", 100)
+    limo.add_fuel(20)
+    print(limo.fuel)
+    limo.drive(115)
+
+
+if __name__ == '__main__':
+    main()
