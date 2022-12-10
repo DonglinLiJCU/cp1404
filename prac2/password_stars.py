@@ -19,3 +19,4 @@ def print_star(passwd):
 
 
 main()
+
