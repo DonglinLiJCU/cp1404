@@ -3,6 +3,11 @@ CP1404/CP5632 Practical
 File and class example - opens/reads a file, stores in objects of custom class
 (contains multiple versions for demonstration: using csv and namedtuple)
 """
+"""
+File and class
+Estimate: 3 minutes
+Actual:   5 minutes
+"""
 
 import csv
 from collections import namedtuple

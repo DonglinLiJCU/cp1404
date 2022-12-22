@@ -1,3 +1,9 @@
+"""
+Guitars
+Estimate: 7 minutes
+Actual:   7 minutes
+"""
+
 class Guitar:
     def __init__(self, name="", year=0, cost=0.0):
         self.name = name

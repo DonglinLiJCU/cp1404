@@ -30,6 +30,7 @@ def main():
     for i in out():
         print(i)
 
+
 def add_guitar(name, year, cost):
     guitars.append(Guitar(name, year, cost))
     return f"{name} ({year}) : ${cost:.2f} added."
