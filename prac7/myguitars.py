@@ -27,8 +27,49 @@ def main():
         parts = line.strip().split(',')
         guitars.append(Guitar(parts[0], int(parts[1]), float(parts[2])))
     guitars.sort()
+    print("Initial guitars:")
     for guitar in guitars:
         print(guitar)
+
+    print()
+    print("Add new guitar:")
+    while True:
+        name = input("Name: ")
+        if name == "":
+            break
+        year = int(input("Year: "))
+        cost = float(input("Cost: $"))
+        print(add_guitar(name, year, cost, guitars))
+        print()
+
+    print()
+    print("... snip ...")
+    print()
+    print("These are my guitars:")
+    write_to_csv(guitars)
+    for i in out(guitars):
+        print(i)
+
+
+def add_guitar(name, year, cost, guitars):
+    guitars.append(Guitar(name, year, cost))
+    return f"{name} ({year}) : ${cost:.2f} added."
+
+
+def out(guitars):
+    output = []
+    for index, item in enumerate(guitars):
+        tmp = f"Guitar {index + 1}: {item.name:>40} ({item.year}), worth ${item.cost:10,.2f} (vintage)" if item.is_vintage() \
+            else f"Guitar {index + 1}: {item.name:>40} ({item.year}), worth ${item.cost:10,.2f}"
+        output.append(tmp)
+    return output
+
+
+def write_to_csv(guitars):
+    in_file = open("guitars.csv", "w")
+    for guitar in guitars:
+        in_file.write(f"{guitar.name},{guitar.year},{guitar.cost}\n")
+    in_file.close()
 
 
 main()
