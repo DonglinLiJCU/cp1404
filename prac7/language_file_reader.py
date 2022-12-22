@@ -34,7 +34,7 @@ def main():
         # Construct a ProgrammingLanguage object using the elements
         # year should be an int
         pointer_arithmetic = parts[4] == "Yes"
-        language = ProgrammingLanguage(parts[0], parts[1], reflection, int(parts[3]),pointer_arithmetic)
+        language = ProgrammingLanguage(parts[0], parts[1], reflection, int(parts[3]), pointer_arithmetic)
         # Add the language we've just constructed to the list
         languages.append(language)
     # Close the file as soon as we've finished reading it
